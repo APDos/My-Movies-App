@@ -44,13 +44,14 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             let context = app?.managedObjectContext
             let entity = NSEntityDescription.entityForName("Movie", inManagedObjectContext: context!)
             let movie = Movie(entity: entity!, insertIntoManagedObjectContext: context)
-            movie.titleOfMovie = titleTextField.text
+            movie.titleOfMovie = titleTextField.text!
             movie.plotOfMovie = plotTextField.text
             movie.descOfMovie = descTextField.text
             movie.setMovieImage((self.addImageBtnOutlet.imageView?.image)!)
             
             let urlName = titleTextField.text
-            movie.linkToMovie = "www.imdb.com/find?s=all&q=\(urlName?.stringByReplacingOccurrencesOfString(" ", withString: "+"))"
+            let fixedUrlName = urlName!.stringByReplacingOccurrencesOfString(" ", withString: "+")
+            movie.linkToMovie = "www.imdb.com/find?s=all&q=\(fixedUrlName)" as String!
             
             context?.insertObject(movie)
             do {
@@ -60,12 +61,14 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             }
         }
         
+        navigationController?.popViewControllerAnimated(true)
+        
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         
         addImageBtnOutlet.setImage(image, forState: .Normal)
-        
+        addImageBtnOutlet.imageView?.contentMode = UIViewContentMode.ScaleToFill
         dismissViewControllerAnimated(true, completion: nil)
         
     }

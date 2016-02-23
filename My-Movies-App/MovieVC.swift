@@ -16,15 +16,22 @@ class MovieVC: UIViewController {
     @IBOutlet weak var moviePlot: UILabel!
     @IBOutlet weak var movieURL: UILabel!
     
-    var currentMovie = Movie()
+    var movieNumber = 0
+    var movies = [Movie]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchAndSetResults()
-        configureScreen(currentMovie)
+        
+        
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        fetchAndSetResults()
+        
+        configureScreen(movies[movieNumber])
     }
 
     func fetchAndSetResults() {
@@ -34,8 +41,8 @@ class MovieVC: UIViewController {
         
         do {
             let results = try context?.executeFetchRequest(fetchRequest)
-            self.currentMovie = results![0] as! Movie
-            print(currentMovie)
+            self.movies = results as! [Movie]
+            
             
         } catch let err as NSError {
             print(err.debugDescription)

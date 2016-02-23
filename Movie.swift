@@ -11,6 +11,8 @@ import CoreData
 import UIKit
 
 class Movie: NSManagedObject {
+    
+    
 
     //set image
     func setMovieImage(img: UIImage) {

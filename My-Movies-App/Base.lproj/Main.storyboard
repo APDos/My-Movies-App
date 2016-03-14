@@ -212,7 +212,7 @@
                                     <constraint firstAttribute="width" constant="250" id="Xd1-st-QEV"/>
                                     <constraint firstAttribute="height" constant="30" id="sli-lZ-KNI"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Add Movie">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>

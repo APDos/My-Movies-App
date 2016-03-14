@@ -54,14 +54,23 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             movie.linkToMovie = "www.imdb.com/find?s=all&q=\(fixedUrlName)" as String!
             
             context?.insertObject(movie)
+            
             do {
                 try context?.save()
             } catch let err as NSError {
                 print(err.debugDescription)
             }
+            
+            navigationController?.popViewControllerAnimated(true)
+
+        } else {
+            
+            let alert = UIAlertController(title: "Error", message: "Please complete all fields", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
         }
         
-        navigationController?.popViewControllerAnimated(true)
         
     }
     

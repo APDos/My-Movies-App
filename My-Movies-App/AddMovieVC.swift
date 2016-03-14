@@ -9,6 +9,7 @@
 import UIKit
 import WebKit
 import CoreData
+import Alamofire
 
 class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -26,6 +27,19 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     }
     
     override func viewDidAppear(animated: Bool) {
+        
+    }
+    
+    @IBAction func searchForMovie(sender: UIButton) {
+        
+        let urlName = titleTextField.text
+        let fixedUrlName = urlName!.stringByReplacingOccurrencesOfString(" ", withString: "+")
+        
+        let request = Alamofire.request(.GET, "http://www.omdbapi.com/?t=\(fixedUrlName)&y=&plot=short&tomatoes=true&r=json").responseJSON(completionHandler: { response in
+            
+            print(response.result.value)
+            
+        })
         
     }
 

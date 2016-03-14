@@ -136,14 +136,35 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1B-o9-sV2">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="fPp-YN-uVu">
                                         <rect key="frame" x="0.0" y="29" width="560" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1B-o9-sV2">
+                                                <rect key="frame" x="0.0" y="0.0" width="474" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="o5O-ZE-b6X"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibj-ae-yju" customClass="CustomButton" customModule="My_Movies_App" customModuleProvider="target">
+                                                <rect key="frame" x="485" y="0.0" width="75" height="30"/>
+                                                <color key="backgroundColor" red="0.49411764705882355" green="0.87058823529411766" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="gio-Yu-5P3"/>
+                                                </constraints>
+                                                <state key="normal" title="Search">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="searchForMovie:" destination="9Dv-2D-T7a" eventType="touchUpInside" id="arT-5x-z4w"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="o5O-ZE-b6X"/>
+                                            <constraint firstAttribute="trailing" secondItem="ibj-ae-yju" secondAttribute="trailing" id="O8i-Mj-AoI"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNK-d7-Jls">
                                         <rect key="frame" x="0.0" y="64" width="87" height="24"/>
                                         <constraints>
@@ -153,7 +174,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gOh-cj-wBz" customClass="CustomTextView" customModule="My_Movies_App" customModuleProvider="target">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gOh-cj-wBz" customClass="CustomTextView" customModule="My_Movies_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="93" width="560" height="75"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
@@ -168,7 +189,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RPM-xn-iiM" customClass="CustomTextView" customModule="My_Movies_App" customModuleProvider="target">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RPM-xn-iiM" customClass="CustomTextView" customModule="My_Movies_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="202" width="560" height="75"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
@@ -199,10 +220,9 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="N1B-o9-sV2" secondAttribute="trailing" id="VpX-wH-niU"/>
+                                    <constraint firstAttribute="trailing" secondItem="fPp-YN-uVu" secondAttribute="trailing" id="0at-p9-R8n"/>
                                     <constraint firstItem="gOh-cj-wBz" firstAttribute="trailing" secondItem="RPM-xn-iiM" secondAttribute="trailing" id="n1t-TJ-C1P"/>
                                     <constraint firstItem="RPM-xn-iiM" firstAttribute="height" secondItem="gOh-cj-wBz" secondAttribute="height" id="qmd-wI-4Zb"/>
-                                    <constraint firstItem="gOh-cj-wBz" firstAttribute="trailing" secondItem="N1B-o9-sV2" secondAttribute="trailing" id="y4N-6b-1k4"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ye3-ui-Qg8" customClass="CustomButton" customModule="My_Movies_App" customModuleProvider="target">

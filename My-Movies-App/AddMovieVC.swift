@@ -35,9 +35,15 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         let urlName = titleTextField.text
         let fixedUrlName = urlName!.stringByReplacingOccurrencesOfString(" ", withString: "+")
         
-        let request = Alamofire.request(.GET, "http://www.omdbapi.com/?t=\(fixedUrlName)&y=&plot=short&tomatoes=true&r=json").responseJSON(completionHandler: { response in
+        Alamofire.request(.GET, "http://www.omdbapi.com/?t=\(fixedUrlName)&y=&plot=short&tomatoes=true&r=json").responseJSON(completionHandler: { response in
             
-            print(response.result.value)
+            if let json = response.result.value as? [String: String] {
+                
+                print("JSON")
+                self.plotTextField.text = json["Plot"]
+                self.descTextField.text = json["tomatoConsensus"]
+                
+            }
             
         })
         

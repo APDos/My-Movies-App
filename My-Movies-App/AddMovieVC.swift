@@ -18,6 +18,12 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @IBOutlet weak var plotTextField: CustomTextView!
     @IBOutlet weak var descTextField: CustomTextView!
     
+    @IBOutlet weak var metaRating: UILabel!
+    @IBOutlet weak var imdbRating: UILabel!
+    @IBOutlet weak var rottenRating: UILabel!
+    
+    @IBOutlet weak var movieImg: UIImageView!
+    
     var imagePicker = UIImagePickerController()
     
     
@@ -39,9 +45,24 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             
             if let json = response.result.value as? [String: String] {
                 
-                print("JSON")
+                if let poster = json["Poster"] {
+                    
+                    let url = NSURL(string: poster)
+                        
+                        print(url)
+                        let data = NSData(contentsOfURL: url!)
+                        self.movieImg.image = UIImage(data: data!)
+                        
+                    
+                    
+                }
+                
+
+                
                 self.plotTextField.text = json["Plot"]
-                self.descTextField.text = json["tomatoConsensus"]
+                self.metaRating.text = "\(json["Metascore"]!)/100"
+                self.imdbRating.text = "\(json["imdbRating"]!)/10"
+                self.rottenRating.text = "\(json["tomatoMeter"]!)%"
                 
             }
             

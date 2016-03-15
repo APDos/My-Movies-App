@@ -42,13 +42,13 @@
                                                         <constraint firstAttribute="height" constant="21" id="gDt-Iu-Iow"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Xe6-Z5-prX" userLabel="DescLbl">
                                                     <rect key="frame" x="91" y="45" width="501" height="47"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8ym-fI-KRh" userLabel="UrlLbl">
@@ -57,7 +57,7 @@
                                                         <constraint firstAttribute="height" constant="20" id="fos-AC-OA1"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -100,7 +100,7 @@
                     <navigationItem key="navigationItem" id="6bq-0m-QRD">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="dxo-2X-TM9">
                             <connections>
-                                <segue destination="9Dv-2D-T7a" kind="show" id="wzQ-kz-ElP"/>
+                                <segue destination="ay7-W7-D2O" kind="show" id="LZx-jr-BFE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -113,139 +113,253 @@
             <point key="canvasLocation" x="1117" y="364"/>
         </scene>
         <!--Add MovieVC-->
-        <scene sceneID="glr-Xb-3b8">
+        <scene sceneID="RwL-m6-Bve">
             <objects>
-                <viewController id="9Dv-2D-T7a" customClass="AddMovieVC" customModule="My_Movies_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ay7-W7-D2O" customClass="AddMovieVC" customModule="My_Movies_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fq6-h7-pdq"/>
-                        <viewControllerLayoutGuide type="bottom" id="IXj-Mz-HcU"/>
+                        <viewControllerLayoutGuide type="top" id="e7c-zU-c1c"/>
+                        <viewControllerLayoutGuide type="bottom" id="0z4-WK-GXz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Gxp-qq-cJd">
+                    <view key="view" contentMode="scaleToFill" id="4sY-bt-4DA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pgr-J8-Ens">
-                                <rect key="frame" x="20" y="84" width="560" height="461"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eX2-ie-DmJ">
+                                <rect key="frame" x="8" y="72" width="584" height="520"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvO-i8-ddf">
-                                        <rect key="frame" x="0.0" y="0.0" width="83" height="24"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="21F-YM-nDJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="584" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buj-bb-f6R">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="30"/>
+                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gz4-pI-wGV">
+                                                <rect key="frame" x="80" y="0.0" width="443" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6j-u2-sBT" customClass="CustomButton" customModule="My_Movies_App" customModuleProvider="target">
+                                                <rect key="frame" x="534" y="0.0" width="50" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="kxt-dX-Fd1"/>
+                                                </constraints>
+                                                <state key="normal" title="Search"/>
+                                                <connections>
+                                                    <action selector="searchForMovie:" destination="ay7-W7-D2O" eventType="touchUpInside" id="Zkf-dK-7DM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="skT-yB-Tid"/>
+                                            <constraint firstAttribute="height" constant="30" id="BHd-SV-l37"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1B-o9-sV2">
-                                        <rect key="frame" x="0.0" y="29" width="560" height="30"/>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Description: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icV-AV-r1p">
+                                        <rect key="frame" x="0.0" y="35" width="106" height="18"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="o5O-ZE-b6X"/>
+                                            <constraint firstAttribute="height" constant="18" id="6ni-sj-LfT"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNK-d7-Jls">
-                                        <rect key="frame" x="0.0" y="64" width="87" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="421-a7-SGl"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gOh-cj-wBz" customClass="CustomTextView" customModule="My_Movies_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="93" width="560" height="75"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cg3-gN-b9L" userLabel="Desc Text View" customClass="CustomTextView" customModule="My_Movies_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="58" width="584" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Qxc-Nb-qPz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="Plot:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noR-N4-UT5">
-                                        <rect key="frame" x="0.0" y="173" width="32" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plot:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJR-lq-ajz">
+                                        <rect key="frame" x="0.0" y="113" width="26" height="18"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="gRr-G1-w8S"/>
+                                            <constraint firstAttribute="height" constant="18" id="wAJ-69-rfr"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RPM-xn-iiM" customClass="CustomTextView" customModule="My_Movies_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="202" width="560" height="75"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3p3-z0-nLy" userLabel="Plot Text View" customClass="CustomTextView" customModule="My_Movies_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="136" width="584" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="RGE-Y8-vLN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="US7-1c-ipo">
-                                        <rect key="frame" x="0.0" y="282" width="50" height="24"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EZq-MG-fQc">
+                                        <rect key="frame" x="0.0" y="191" width="584" height="18"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Released:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ole-RX-DhO">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="gL2-Jb-kOl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ac7-PX-fzt">
+                                                <rect key="frame" x="65" y="0.0" width="276" height="18"/>
+                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Length:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlp-V9-6Nm">
+                                                <rect key="frame" x="346" y="0.0" width="43" height="18"/>
+                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6J-yq-H2N">
+                                                <rect key="frame" x="394" y="0.0" width="91" height="18"/>
+                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rated:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flK-bc-yt8">
+                                                <rect key="frame" x="490" y="0.0" width="39" height="18"/>
+                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUk-e8-3dJ">
+                                                <rect key="frame" x="534" y="0.0" width="50" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="x2E-zJ-uzn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="lcl-W0-CSi"/>
+                                            <constraint firstAttribute="height" constant="18" id="zHV-4e-diq"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rND-6m-5aZ" customClass="CustomButton" customModule="My_Movies_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="311" width="75" height="150"/>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mY0-T8-ZLb">
+                                        <rect key="frame" x="0.0" y="214" width="584" height="2"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="VGv-Uw-wGI"/>
-                                            <constraint firstAttribute="width" constant="75" id="l7T-Vu-oDi"/>
+                                            <constraint firstAttribute="height" constant="2" id="5x9-0Y-0J3"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="88"/>
-                                        <state key="normal" title="+">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ABl-h9-lH9">
+                                        <rect key="frame" x="0.0" y="221" width="584" height="264"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xC-1B-7wL" userLabel="Movie Image">
+                                                <rect key="frame" x="0.0" y="0.0" width="429" height="264"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="N2i-B8-glA">
+                                                <rect key="frame" x="434" y="0.0" width="150" height="264"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meta Score: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvM-f7-sph">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="35"/>
+                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="18"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vL7-as-7ip" userLabel="Meta Rating">
+                                                        <rect key="frame" x="0.0" y="46" width="150" height="35"/>
+                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMDB: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyu-ux-3AE">
+                                                        <rect key="frame" x="0.0" y="92" width="150" height="35"/>
+                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="18"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6E1-zx-cDe" userLabel="IMDB Rating">
+                                                        <rect key="frame" x="0.0" y="138" width="150" height="34"/>
+                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rotten Tomatoes: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4g-FG-fvi">
+                                                        <rect key="frame" x="0.0" y="183" width="150" height="35"/>
+                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="18"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gT1-HF-G1P" userLabel="Rotten Rating">
+                                                        <rect key="frame" x="0.0" y="229" width="150" height="35"/>
+                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="Lv4-uC-Ra5"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="N2i-B8-glA" firstAttribute="centerY" secondItem="ABl-h9-lH9" secondAttribute="centerY" id="Zt1-dX-nce"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rq-HM-G2g" customClass="CustomButton" customModule="My_Movies_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="490" width="150" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="mBf-5B-Qjj"/>
+                                            <constraint firstAttribute="height" constant="30" id="rfU-Q4-c6b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
+                                        <state key="normal" title="SAVE"/>
                                         <connections>
-                                            <action selector="addImageBtn:" destination="9Dv-2D-T7a" eventType="touchUpInside" id="xaL-FV-4Jj"/>
+                                            <action selector="saveMovieBtn:" destination="ay7-W7-D2O" eventType="touchUpInside" id="fUY-a9-HmK"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="N1B-o9-sV2" secondAttribute="trailing" id="VpX-wH-niU"/>
-                                    <constraint firstItem="gOh-cj-wBz" firstAttribute="trailing" secondItem="RPM-xn-iiM" secondAttribute="trailing" id="n1t-TJ-C1P"/>
-                                    <constraint firstItem="RPM-xn-iiM" firstAttribute="height" secondItem="gOh-cj-wBz" secondAttribute="height" id="qmd-wI-4Zb"/>
-                                    <constraint firstItem="gOh-cj-wBz" firstAttribute="trailing" secondItem="N1B-o9-sV2" secondAttribute="trailing" id="y4N-6b-1k4"/>
+                                    <constraint firstAttribute="trailing" secondItem="3p3-z0-nLy" secondAttribute="trailing" id="3Xo-uX-dLB"/>
+                                    <constraint firstAttribute="trailing" secondItem="21F-YM-nDJ" secondAttribute="trailing" id="B8J-a0-UKX"/>
+                                    <constraint firstItem="3p3-z0-nLy" firstAttribute="leading" secondItem="eX2-ie-DmJ" secondAttribute="leading" id="Bl6-yK-wCf"/>
+                                    <constraint firstAttribute="trailing" secondItem="mY0-T8-ZLb" secondAttribute="trailing" id="Fov-Yy-Wii"/>
+                                    <constraint firstAttribute="trailing" secondItem="EZq-MG-fQc" secondAttribute="trailing" id="K7O-IA-Peg"/>
+                                    <constraint firstItem="21F-YM-nDJ" firstAttribute="leading" secondItem="eX2-ie-DmJ" secondAttribute="leading" id="Ljw-b9-ENA"/>
+                                    <constraint firstItem="EZq-MG-fQc" firstAttribute="leading" secondItem="eX2-ie-DmJ" secondAttribute="leading" id="Mgr-wW-MQc"/>
+                                    <constraint firstAttribute="trailing" secondItem="cg3-gN-b9L" secondAttribute="trailing" id="NNu-5a-2PA"/>
+                                    <constraint firstItem="mY0-T8-ZLb" firstAttribute="leading" secondItem="eX2-ie-DmJ" secondAttribute="leading" id="PLo-Jn-G6T"/>
+                                    <constraint firstAttribute="trailing" secondItem="ABl-h9-lH9" secondAttribute="trailing" id="mjx-zd-F1g"/>
+                                    <constraint firstItem="6rq-HM-G2g" firstAttribute="centerX" secondItem="eX2-ie-DmJ" secondAttribute="centerX" id="pXS-x3-o8H"/>
+                                    <constraint firstItem="ABl-h9-lH9" firstAttribute="leading" secondItem="eX2-ie-DmJ" secondAttribute="leading" id="rGh-DP-yUO"/>
+                                    <constraint firstItem="cg3-gN-b9L" firstAttribute="leading" secondItem="eX2-ie-DmJ" secondAttribute="leading" id="vSk-8Z-ZUY"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ye3-ui-Qg8" customClass="CustomButton" customModule="My_Movies_App" customModuleProvider="target">
-                                <rect key="frame" x="175" y="550" width="250" height="30"/>
-                                <color key="backgroundColor" red="0.55172910809999998" green="0.89232628300000005" blue="0.95454545449999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="Xd1-st-QEV"/>
-                                    <constraint firstAttribute="height" constant="30" id="sli-lZ-KNI"/>
-                                </constraints>
-                                <state key="normal" title="Add Movie">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="createMovieBtn:" destination="9Dv-2D-T7a" eventType="touchUpInside" id="87h-E9-z09"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ye3-ui-Qg8" firstAttribute="centerX" secondItem="Gxp-qq-cJd" secondAttribute="centerX" id="6Dy-rZ-7zc"/>
-                            <constraint firstItem="pgr-J8-Ens" firstAttribute="top" secondItem="fq6-h7-pdq" secondAttribute="bottom" constant="20" id="8Lf-z8-5UX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pgr-J8-Ens" secondAttribute="trailing" id="E2c-nN-iJK"/>
-                            <constraint firstItem="Ye3-ui-Qg8" firstAttribute="top" secondItem="pgr-J8-Ens" secondAttribute="bottom" constant="5" id="JhT-U2-ZEL"/>
-                            <constraint firstItem="IXj-Mz-HcU" firstAttribute="top" secondItem="Ye3-ui-Qg8" secondAttribute="bottom" constant="20" id="czF-U7-ZLU"/>
-                            <constraint firstItem="IXj-Mz-HcU" firstAttribute="top" secondItem="pgr-J8-Ens" secondAttribute="bottom" constant="20" id="fxD-V4-tj2"/>
-                            <constraint firstItem="pgr-J8-Ens" firstAttribute="leading" secondItem="Gxp-qq-cJd" secondAttribute="leadingMargin" id="ql1-fb-cCx"/>
+                            <constraint firstItem="eX2-ie-DmJ" firstAttribute="leading" secondItem="4sY-bt-4DA" secondAttribute="leadingMargin" constant="-12" id="1Y0-lU-sr9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eX2-ie-DmJ" secondAttribute="trailing" constant="-12" id="55e-nP-Ece"/>
+                            <constraint firstItem="eX2-ie-DmJ" firstAttribute="top" secondItem="e7c-zU-c1c" secondAttribute="bottom" constant="8" id="l40-Iy-7zC"/>
+                            <constraint firstItem="0z4-WK-GXz" firstAttribute="top" secondItem="eX2-ie-DmJ" secondAttribute="bottom" constant="8" id="tnO-zf-zM8"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="fxD-V4-tj2"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
-                        <outlet property="addImageBtnOutlet" destination="rND-6m-5aZ" id="tAp-xz-h9v"/>
-                        <outlet property="descTextField" destination="gOh-cj-wBz" id="mMf-7o-TSl"/>
-                        <outlet property="plotTextField" destination="RPM-xn-iiM" id="uXi-HM-nhl"/>
-                        <outlet property="titleTextField" destination="N1B-o9-sV2" id="nMj-ys-O1R"/>
+                        <outlet property="descTextField" destination="cg3-gN-b9L" id="9SO-Gi-cdl"/>
+                        <outlet property="imdbRating" destination="6E1-zx-cDe" id="puJ-rZ-wB0"/>
+                        <outlet property="metaRating" destination="vL7-as-7ip" id="bgz-tC-MhA"/>
+                        <outlet property="movieImg" destination="4xC-1B-7wL" id="R2d-8k-WPN"/>
+                        <outlet property="movieLength" destination="Z6J-yq-H2N" id="wHu-XQ-97h"/>
+                        <outlet property="movieRating" destination="OUk-e8-3dJ" id="cPw-vX-rX6"/>
+                        <outlet property="plotTextField" destination="3p3-z0-nLy" id="Cok-d4-fwf"/>
+                        <outlet property="releaseDate" destination="Ac7-PX-fzt" id="abF-Nh-mP9"/>
+                        <outlet property="rottenRating" destination="gT1-HF-G1P" id="6qs-5b-ZKT"/>
+                        <outlet property="titleTextField" destination="Gz4-pI-wGV" id="E2M-Wm-HdH"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Bu-U6-kFx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LMO-DX-NqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1829" y="188"/>
+            <point key="canvasLocation" x="1848" y="139"/>
         </scene>
         <!--MovieVC-->
         <scene sceneID="5wM-7I-v1n">
@@ -269,7 +383,7 @@
                                             <constraint firstAttribute="width" constant="380" id="Yws-Mx-mkr"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="29"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qQE-X6-Mxs">
@@ -285,7 +399,7 @@
                                             <constraint firstAttribute="height" constant="25" id="cfW-CR-U8w"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Description:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boj-9u-PHy">
@@ -294,13 +408,13 @@
                                             <constraint firstAttribute="height" constant="21" id="iB7-5R-xtq"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="XOL-Ch-u6Y">
                                         <rect key="frame" x="0.0" y="387" width="560" height="64"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plot:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3h-b0-VLu">
@@ -309,13 +423,13 @@
                                             <constraint firstAttribute="height" constant="21" id="gfj-xX-D9k"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="8WU-I1-B0s">
                                         <rect key="frame" x="0.0" y="472" width="560" height="64"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -346,7 +460,6 @@
                         <outlet property="movieDesc" destination="XOL-Ch-u6Y" id="MJY-51-vhl"/>
                         <outlet property="movieImg" destination="qQE-X6-Mxs" id="uYW-ee-2lR"/>
                         <outlet property="moviePlot" destination="8WU-I1-B0s" id="qED-8o-vGh"/>
-                        <outlet property="movieURL" destination="S75-3z-zjV" id="CDZ-mT-HjY"/>
                         <outlet property="titleLbl" destination="jFg-Ys-m7O" id="38V-S3-HdC"/>
                     </connections>
                 </viewController>

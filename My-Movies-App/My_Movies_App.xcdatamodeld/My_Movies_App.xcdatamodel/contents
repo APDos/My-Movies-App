@@ -3,11 +3,18 @@
     <entity name="Movie" representedClassName=".Movie" syncable="YES">
         <attribute name="descOfMovie" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageOfMovie" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="imdbRating" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="linkToMovie" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="metaScore" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="plotOfMovie" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="runtime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="titleOfMovie" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tomatoMeter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tomatoUrl" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Movie" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="Movie" positionX="-63" positionY="-18" width="128" height="225"/>
     </elements>
 </model>

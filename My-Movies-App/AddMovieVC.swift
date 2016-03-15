@@ -95,7 +95,7 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             let entity = NSEntityDescription.entityForName("Movie", inManagedObjectContext: context!)
             let movie = Movie(entity: entity!, insertIntoManagedObjectContext: context)
             
-            movie.titleOfMovie = titleTextField.text!
+            movie.titleOfMovie = titleTextField.text?.capitalizedString
             movie.plotOfMovie = plotTextField.text
             movie.descOfMovie = descTextField.text
             movie.releaseDate = releaseDate.text

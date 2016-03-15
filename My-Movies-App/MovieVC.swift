@@ -12,8 +12,17 @@ class MovieVC: UIViewController {
 
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var movieImg: UIImageView!
-    @IBOutlet weak var movieDesc: UILabel!
-    @IBOutlet weak var moviePlot: UILabel!
+    @IBOutlet weak var movieDesc: CustomTextView!
+    @IBOutlet weak var moviePlot: CustomTextView!
+    
+    @IBOutlet weak var releasedLbl: UILabel!
+    @IBOutlet weak var lengthLbl: UILabel!
+    
+    @IBOutlet weak var ratingLbl: UILabel!
+    @IBOutlet weak var metaLbl: UILabel!
+    @IBOutlet weak var imdbLbl: UILabel!
+    @IBOutlet weak var rottenLbl: UILabel!
+    
     
     var movieNumber = 0
     var movies = [Movie]()
@@ -52,6 +61,15 @@ class MovieVC: UIViewController {
         movieImg.image = UIImage(data: movie.imageOfMovie!)
         movieDesc.text = movie.descOfMovie
         moviePlot.text = movie.plotOfMovie
+        
+        ratingLbl.text = movie.rating
+        metaLbl.text = movie.metaScore
+        imdbLbl.text = movie.imdbRating
+        rottenLbl.text = movie.tomatoMeter
+        
+        releasedLbl.text = movie.releaseDate
+        lengthLbl.text = movie.runtime
+        
     }
     
 }

@@ -14,13 +14,16 @@ import Alamofire
 class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var addImageBtnOutlet: UIButton!
     @IBOutlet weak var plotTextField: CustomTextView!
     @IBOutlet weak var descTextField: CustomTextView!
     
     @IBOutlet weak var metaRating: UILabel!
     @IBOutlet weak var imdbRating: UILabel!
     @IBOutlet weak var rottenRating: UILabel!
+    
+    @IBOutlet weak var releaseDate: UILabel!
+    @IBOutlet weak var movieLength: UILabel!
+    @IBOutlet weak var movieRating: UILabel!
     
     @IBOutlet weak var movieImg: UIImageView!
     
@@ -45,50 +48,63 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             
             if let json = response.result.value as? [String: String] {
                 
-                if let poster = json["Poster"] {
+                if json.count == 2 {
                     
-                    let url = NSURL(string: poster)
+                    self.displayErrorMessage("Error", message: "Cannot find movie")
+                    
+                } else {
+                    
+                    if let poster = json["Poster"] {
+                        
+                        let url = NSURL(string: poster)
                         
                         print(url)
                         let data = NSData(contentsOfURL: url!)
                         self.movieImg.image = UIImage(data: data!)
                         
+                        
+                    }
+                    
+                    self.plotTextField.text = json["Plot"]
+                    
+                    self.releaseDate.text = json["Released"]
+                    self.movieLength.text = json["Runtime"]
+                    self.movieRating.text = json["Rated"]
+                    
+                    self.metaRating.text = "\(json["Metascore"]!)/100"
+                    self.imdbRating.text = "\(json["imdbRating"]!)/10"
+                    self.rottenRating.text = "\(json["tomatoMeter"]!)%"
                     
                     
                 }
-                
 
-                
-                self.plotTextField.text = json["Plot"]
-                self.metaRating.text = "\(json["Metascore"]!)/100"
-                self.imdbRating.text = "\(json["imdbRating"]!)/10"
-                self.rottenRating.text = "\(json["tomatoMeter"]!)%"
-                
             }
             
         })
         
     }
-
-    @IBAction func addImageBtn(sender: AnyObject) {
-        
-        presentViewController(imagePicker, animated: true, completion: nil)
-        sender.setTitle("", forState: .Normal)
-        
-    }
     
-    @IBAction func createMovieBtn(sender: AnyObject) {
+    @IBAction func saveMovieBtn(sender: AnyObject) {
         
-        if titleTextField.text != "" && plotTextField.text != "" && descTextField != nil && addImageBtnOutlet.imageView?.image != nil {
+        if plotTextField.text != nil && descTextField.text != "" {
+            
+            print("Begin saving")
             
             let app = UIApplication.sharedApplication().delegate as? AppDelegate
             let context = app?.managedObjectContext
             let entity = NSEntityDescription.entityForName("Movie", inManagedObjectContext: context!)
             let movie = Movie(entity: entity!, insertIntoManagedObjectContext: context)
+            
             movie.titleOfMovie = titleTextField.text!
             movie.plotOfMovie = plotTextField.text
             movie.descOfMovie = descTextField.text
-            movie.setMovieImage((self.addImageBtnOutlet.imageView?.image)!)
+            movie.releaseDate = releaseDate.text
+            movie.runtime = movieLength.text
+            movie.rating = movieRating.text
+            movie.metaScore = metaRating.text
+            movie.imdbRating = imdbRating.text
+            movie.tomatoMeter = rottenRating.text
+            movie.setMovieImage(self.movieImg.image!)
             
             let urlName = titleTextField.text
             let fixedUrlName = urlName!.stringByReplacingOccurrencesOfString(" ", withString: "+")
@@ -106,20 +122,18 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
 
         } else {
             
-            let alert = UIAlertController(title: "Error", message: "Please complete all fields", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            displayErrorMessage("Error", message: "Please complete all fields")
             
         }
         
         
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+    func displayErrorMessage(title: String, message: String) {
         
-        addImageBtnOutlet.setImage(image, forState: .Normal)
-        addImageBtnOutlet.imageView?.contentMode = UIViewContentMode.ScaleToFill
-        dismissViewControllerAnimated(true, completion: nil)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
         
     }
     

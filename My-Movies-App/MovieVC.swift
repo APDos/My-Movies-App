@@ -14,15 +14,12 @@ class MovieVC: UIViewController {
     @IBOutlet weak var movieImg: UIImageView!
     @IBOutlet weak var movieDesc: UILabel!
     @IBOutlet weak var moviePlot: UILabel!
-    @IBOutlet weak var movieURL: UILabel!
     
     var movieNumber = 0
     var movies = [Movie]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
 
         // Do any additional setup after loading the view.
@@ -32,6 +29,7 @@ class MovieVC: UIViewController {
         fetchAndSetResults()
         
         configureScreen(movies[movieNumber])
+        print(movies[movieNumber])
     }
 
     func fetchAndSetResults() {
@@ -54,7 +52,6 @@ class MovieVC: UIViewController {
         movieImg.image = UIImage(data: movie.imageOfMovie!)
         movieDesc.text = movie.descOfMovie
         moviePlot.text = movie.plotOfMovie
-        movieURL.text = movie.linkToMovie
     }
     
 }

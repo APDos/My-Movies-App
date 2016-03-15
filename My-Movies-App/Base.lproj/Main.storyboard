@@ -192,23 +192,47 @@
                                         <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EZq-MG-fQc">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EZq-MG-fQc">
                                         <rect key="frame" x="0.0" y="191" width="584" height="18"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Released:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ole-RX-DhO">
-                                                <rect key="frame" x="0.0" y="0.0" width="191" height="18"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="gL2-Jb-kOl"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Length:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlp-V9-6Nm">
-                                                <rect key="frame" x="196" y="0.0" width="192" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ac7-PX-fzt">
+                                                <rect key="frame" x="65" y="0.0" width="276" height="18"/>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rated:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flK-bc-yt8">
-                                                <rect key="frame" x="393" y="0.0" width="191" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Length:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlp-V9-6Nm">
+                                                <rect key="frame" x="346" y="0.0" width="43" height="18"/>
+                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6J-yq-H2N">
+                                                <rect key="frame" x="394" y="0.0" width="91" height="18"/>
+                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rated:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flK-bc-yt8">
+                                                <rect key="frame" x="490" y="0.0" width="39" height="18"/>
+                                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUk-e8-3dJ">
+                                                <rect key="frame" x="534" y="0.0" width="50" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="x2E-zJ-uzn"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -228,7 +252,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ABl-h9-lH9">
                                         <rect key="frame" x="0.0" y="221" width="584" height="264"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="free-movie-film-poster-the_dark_knight_movie_poster" translatesAutoresizingMaskIntoConstraints="NO" id="4xC-1B-7wL" userLabel="Movie Image">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xC-1B-7wL" userLabel="Movie Image">
                                                 <rect key="frame" x="0.0" y="0.0" width="429" height="264"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="N2i-B8-glA">
@@ -240,7 +264,7 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vL7-as-7ip" userLabel="Meta Rating">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vL7-as-7ip" userLabel="Meta Rating">
                                                         <rect key="frame" x="0.0" y="46" width="150" height="35"/>
                                                         <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -252,7 +276,7 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6E1-zx-cDe" userLabel="IMDB Rating">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6E1-zx-cDe" userLabel="IMDB Rating">
                                                         <rect key="frame" x="0.0" y="138" width="150" height="34"/>
                                                         <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -264,7 +288,7 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gT1-HF-G1P" userLabel="Rotten Rating">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gT1-HF-G1P" userLabel="Rotten Rating">
                                                         <rect key="frame" x="0.0" y="229" width="150" height="35"/>
                                                         <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -288,6 +312,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
                                         <state key="normal" title="SAVE"/>
+                                        <connections>
+                                            <action selector="saveMovieBtn:" destination="ay7-W7-D2O" eventType="touchUpInside" id="fUY-a9-HmK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -322,7 +349,10 @@
                         <outlet property="imdbRating" destination="6E1-zx-cDe" id="puJ-rZ-wB0"/>
                         <outlet property="metaRating" destination="vL7-as-7ip" id="bgz-tC-MhA"/>
                         <outlet property="movieImg" destination="4xC-1B-7wL" id="R2d-8k-WPN"/>
+                        <outlet property="movieLength" destination="Z6J-yq-H2N" id="wHu-XQ-97h"/>
+                        <outlet property="movieRating" destination="OUk-e8-3dJ" id="cPw-vX-rX6"/>
                         <outlet property="plotTextField" destination="3p3-z0-nLy" id="Cok-d4-fwf"/>
+                        <outlet property="releaseDate" destination="Ac7-PX-fzt" id="abF-Nh-mP9"/>
                         <outlet property="rottenRating" destination="gT1-HF-G1P" id="6qs-5b-ZKT"/>
                         <outlet property="titleTextField" destination="Gz4-pI-wGV" id="E2M-Wm-HdH"/>
                     </connections>
@@ -430,7 +460,6 @@
                         <outlet property="movieDesc" destination="XOL-Ch-u6Y" id="MJY-51-vhl"/>
                         <outlet property="movieImg" destination="qQE-X6-Mxs" id="uYW-ee-2lR"/>
                         <outlet property="moviePlot" destination="8WU-I1-B0s" id="qED-8o-vGh"/>
-                        <outlet property="movieURL" destination="S75-3z-zjV" id="CDZ-mT-HjY"/>
                         <outlet property="titleLbl" destination="jFg-Ys-m7O" id="38V-S3-HdC"/>
                     </connections>
                 </viewController>
@@ -458,7 +487,4 @@
             <point key="canvasLocation" x="342" y="1010"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="free-movie-film-poster-the_dark_knight_movie_poster" width="2000" height="2963"/>
-    </resources>
 </document>

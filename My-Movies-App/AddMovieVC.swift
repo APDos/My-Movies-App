@@ -29,17 +29,24 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     var imagePicker = UIImagePickerController()
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-    }
-    
-    override func viewDidAppear(animated: Bool) {
+        activityIndicator.hidesWhenStopped = true
         
     }
+
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.backItem?.backBarButtonItem? = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+    }
+    
     
     @IBAction func searchForMovie(sender: UIButton) {
+        
+        activityIndicator.startAnimating()
         
         let urlName = titleTextField.text
         let fixedUrlName = urlName!.stringByReplacingOccurrencesOfString(" ", withString: "+")
@@ -50,11 +57,12 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
                 
                 if json.count == 2 {
                     
+                    self.activityIndicator.stopAnimating()
                     self.displayErrorMessage("Error", message: "Cannot find movie")
                     
                 } else {
                     
-                    if let poster = json["Poster"] {
+                    if let poster = json["Poster"] where poster != "N/A" {
                         
                         let url = NSURL(string: poster)
                         
@@ -75,6 +83,7 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
                     self.imdbRating.text = "\(json["imdbRating"]!)/10"
                     self.rottenRating.text = "\(json["tomatoMeter"]!)%"
                     
+                    self.activityIndicator.stopAnimating()
                     
                 }
 
@@ -108,7 +117,7 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             
             let urlName = titleTextField.text
             let fixedUrlName = urlName!.stringByReplacingOccurrencesOfString(" ", withString: "+")
-            movie.linkToMovie = "www.imdb.com/find?s=all&q=\(fixedUrlName)" as String!
+            movie.linkToMovie = "http://www.imdb.com/find?s=all&q=\(fixedUrlName)" as String!
             
             context?.insertObject(movie)
             
@@ -136,5 +145,11 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         self.presentViewController(alert, animated: true, completion: nil)
         
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+
     
  }

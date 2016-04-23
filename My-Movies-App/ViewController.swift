@@ -25,12 +25,11 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     override func viewDidAppear(animated: Bool) {
         addLogo()
-        fetchAndSetResults()
-        tableView.reloadData()
         
-        for i in moviesArray {
-            print(i.titleOfMovie)
-        }
+        fetchAndSetResults()
+        
+        tableView.reloadData()
+
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -74,10 +73,10 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     func addLogo() {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 55))
         imageView.contentMode = .ScaleAspectFit
-        // 4
-        let image = UIImage(named: "MyMovies.png")
+        
+        let image = UIImage(named: "Movie-Saver.png")
         imageView.image = image
-        // 5
+        
         navigationItem.titleView = imageView
     }
     

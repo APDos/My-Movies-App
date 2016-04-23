@@ -30,8 +30,7 @@ class MovieVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -39,7 +38,10 @@ class MovieVC: UIViewController {
         
         configureScreen(movies[movieNumber])
         print(movies[movieNumber])
+        
     }
+    
+    
 
     func fetchAndSetResults() {
         let app = UIApplication.sharedApplication().delegate as? AppDelegate
@@ -57,6 +59,7 @@ class MovieVC: UIViewController {
     }
 
     func configureScreen(movie: Movie) {
+        
         titleLbl.text = movie.titleOfMovie
         movieImg.image = UIImage(data: movie.imageOfMovie!)
         movieDesc.text = movie.descOfMovie

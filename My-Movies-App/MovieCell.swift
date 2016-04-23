@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import WebKit
 
 class MovieCell: UITableViewCell {
 
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var cellTitleLbl: UILabel!
     @IBOutlet weak var cellDescLbl: UILabel!
-    @IBOutlet weak var cellUrlLbl: UILabel!
+    
+    var movieLink: String = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,11 +25,19 @@ class MovieCell: UITableViewCell {
     func configureCell(movie: Movie) {
         
         
-        self.cellUrlLbl.text = movie.linkToMovie
-        
+        self.movieLink = movie.linkToMovie!
+        print(movie.linkToMovie)
         self.cellTitleLbl.text = movie.titleOfMovie
         self.cellDescLbl.text = movie.descOfMovie
         self.cellImage.image = movie.getMovieImg()
+        
+    }
+    
+    @IBAction func goToImdb(sender: UIButton) {
+        
+        UIApplication.sharedApplication().openURL(NSURL(string: movieLink)!)
+        print(movieLink)
+        
         
     }
 }

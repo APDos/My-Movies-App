@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import Alamofire
 
 class MovieCell: UITableViewCell {
 
@@ -29,7 +30,29 @@ class MovieCell: UITableViewCell {
         print(movie.linkToMovie)
         self.cellTitleLbl.text = movie.titleOfMovie
         self.cellDescLbl.text = movie.descOfMovie
-        self.cellImage.image = movie.getMovieImg()
+        
+        let urlName = movie.titleOfMovie
+        let fixedUrlName = urlName!.stringByReplacingOccurrencesOfString(" ", withString: "+")
+        
+        Alamofire.request(.GET, "http://www.omdbapi.com/?t=\(fixedUrlName)&y=&plot=short&tomatoes=true&r=json").responseJSON(completionHandler: { response in
+            
+            if let json = response.result.value as? [String: String] {
+
+                    if let poster = json["Poster"] where poster != "N/A" {
+                        
+                        let url = NSURL(string: poster)
+                        
+                        print(url)
+                        let data = NSData(contentsOfURL: url!)
+                        self.cellImage.image = UIImage(data: data!)
+                        
+                        
+                    }
+                
+                
+            }
+            
+        })
         
     }
     

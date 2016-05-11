@@ -113,7 +113,7 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             movie.metaScore = metaRating.text
             movie.imdbRating = imdbRating.text
             movie.tomatoMeter = rottenRating.text
-            movie.setMovieImage(self.movieImg.image!)
+            //movie.setMovieImage(self.movieImg.image!)
             
             let urlName = titleTextField.text
             let fixedUrlName = urlName!.stringByReplacingOccurrencesOfString(" ", withString: "+")

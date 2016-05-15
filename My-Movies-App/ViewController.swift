@@ -12,6 +12,7 @@ import CoreData
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noMoviesLabel: UILabel!
     
     var moviesArray = [Movie]()
     
@@ -29,6 +30,14 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         fetchAndSetResults()
         
         tableView.reloadData()
+        
+        if moviesArray.count == 0 {
+            noMoviesLabel.hidden = false
+            tableView.hidden = true
+        } else {
+            noMoviesLabel.hidden = true
+            tableView.hidden = false
+        }
 
     }
 
@@ -63,6 +72,10 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             }
             
             moviesArray.removeAtIndex(indexPath.row)
+            if moviesArray.count == 0 {
+                tableView.hidden = true
+                noMoviesLabel.hidden = false
+            }
             tableView.reloadData()
             
         }

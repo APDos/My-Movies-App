@@ -84,6 +84,7 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
                     self.rottenRating.text = "\(json["tomatoMeter"]!)%"
                     
                     self.activityIndicator.stopAnimating()
+                    self.view.endEditing(true)
                     
                 }
 

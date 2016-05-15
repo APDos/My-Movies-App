@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import Alamofire
+
 class MovieVC: UIViewController {
 
     @IBOutlet weak var titleLbl: UILabel!
@@ -61,7 +63,7 @@ class MovieVC: UIViewController {
     func configureScreen(movie: Movie) {
         
         titleLbl.text = movie.titleOfMovie
-        movieImg.image = UIImage(data: movie.imageOfMovie!)
+        
         movieDesc.text = movie.descOfMovie
         moviePlot.text = movie.plotOfMovie
         
@@ -72,6 +74,30 @@ class MovieVC: UIViewController {
         
         releasedLbl.text = movie.releaseDate
         lengthLbl.text = movie.runtime
+        
+        
+        let urlName = movie.titleOfMovie
+        let fixedUrlName = urlName!.stringByReplacingOccurrencesOfString(" ", withString: "+")
+        
+        Alamofire.request(.GET, "http://www.omdbapi.com/?t=\(fixedUrlName)&y=&plot=short&tomatoes=true&r=json").responseJSON(completionHandler: { response in
+            
+            if let json = response.result.value as? [String: String] {
+                
+                if let poster = json["Poster"] where poster != "N/A" {
+                    
+                    let url = NSURL(string: poster)
+                    
+                    print(url)
+                    let data = NSData(contentsOfURL: url!)
+                    self.movieImg.image = UIImage(data: data!)
+                    
+                    
+                }
+                
+                
+            }
+            
+        })
         
     }
     

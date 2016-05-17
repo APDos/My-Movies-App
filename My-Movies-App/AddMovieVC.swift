@@ -11,7 +11,7 @@ import WebKit
 import CoreData
 import Alamofire
 
-class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var plotTextField: CustomTextView!
@@ -35,7 +35,7 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         super.viewDidLoad()
         imagePicker.delegate = self
         activityIndicator.hidesWhenStopped = true
-        
+        self.titleTextField.delegate = self
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -151,6 +151,10 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         self.view.endEditing(true)
     }
     
+    func textFieldShouldReturn(userText: UITextField) -> Bool {
+        userText.resignFirstResponder()
+        return true;
+    }
 
     
  }

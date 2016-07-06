@@ -39,8 +39,9 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     }
 
     override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationController?.navigationBar.backItem?.backBarButtonItem? = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        
+        doneKeyboardButton()
+        
     }
     
     
@@ -151,10 +152,27 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         self.view.endEditing(true)
     }
     
+    func doneKeyboardButton() {
+        
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.sizeToFit()
+        let flexBarButtonItem = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let doneBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(doneButtonPressed))
+        keyboardToolbar.items = [flexBarButtonItem, doneBarButtonItem]
+        self.descTextField.inputAccessoryView = keyboardToolbar
+        
+    }
+    
+    func doneButtonPressed() {
+        self.descTextField.resignFirstResponder()
+    }
+    
     func textFieldShouldReturn(userText: UITextField) -> Bool {
         userText.resignFirstResponder()
         return true;
     }
+    
+
 
     
  }

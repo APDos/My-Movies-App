@@ -18,7 +18,10 @@ class CustomTextView: UITextView {
         self.layer.borderWidth = 1
         self.layer.cornerRadius = 5
         self.clipsToBounds = true
+        
     }
+    
+
 
 }
 

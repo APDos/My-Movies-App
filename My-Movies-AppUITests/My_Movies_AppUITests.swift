@@ -31,6 +31,31 @@ class My_Movies_AppUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+        let app = XCUIApplication()
+        app.navigationBars["My_Movies_App.View"].buttons["Add"].tap()
+        app.textFields["Title Text Field"].tap()
+        app.textFields["Title Text Field"].typeText("Rush Hour")
+        
+        let deleteKey = app.keys["delete"]
+        deleteKey.tap()
+        deleteKey.tap()
+        app.textFields["Title Text Field"]
+        app.buttons["Search"].tap()
+        app.textViews["Desc Text View"].tap()
+        app.textViews["Desc Text View"]
+        app.keys["s"].tap()
+        app.textViews["Desc Text View"]
+        app.toolbars.buttons["Done"].tap()
+        app.buttons["SAVE"].tap()
+        
+        
     }
     
+    func makePostTest() {
+        
+        
+
+    }
 }
